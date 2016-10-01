@@ -11,7 +11,7 @@ namespace CaixaEletronico
 
         public int numero;
 
-        public string titular;
+        public Cliente cliente;
 
         public double saldo;
 
@@ -28,6 +28,16 @@ namespace CaixaEletronico
             this.saldo += valor;
 
         }
+
+
+        public void Transfere(double valor, Conta destino)
+        {
+
+            this.Saca(valor);
+            destino.Deposita(valor);
+
+        }
+
 
 
     }
