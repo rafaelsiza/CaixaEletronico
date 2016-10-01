@@ -44,12 +44,18 @@ namespace CaixaEletronico
             Conta mauricio = new Conta();
 
             guilherme.saldo = 1000;
-
             MessageBox.Show("Saldo do Guilherme antes do saque " + guilherme.saldo);
 
             guilherme.Saca(100);
-
             MessageBox.Show("Saldo do Guilherme depois do saque " + guilherme.saldo);
+
+
+            guilherme.Deposita(500);
+            MessageBox.Show("Saldo do Guilherme depois do depósito " + guilherme.saldo);
+
+
+            guilherme.Transfere(50, mauricio);
+            MessageBox.Show("Saldo do Mauricio depois da traferencia " + mauricio.saldo);
 
         }
     }
